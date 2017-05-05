@@ -2,6 +2,7 @@ TensorFlow op to return EIGEN_MAX_ALIGN_BYTES
 
 To compile on Mac:
 
+    TF_INC=$(python -c 'import tensorflow as tf; print(tf.sysconfig.get_include())')
     g++ -std=c++11 -undefined dynamic_lookup -shared max_align_bytes_op.cc -o max_align_bytes_op.so -fPIC -I $TF_INC -O2
 
 Then in the same directory:
