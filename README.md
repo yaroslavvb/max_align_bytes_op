@@ -5,8 +5,18 @@ To compile on Mac:
     TF_INC=$(python -c 'import tensorflow as tf; print(tf.sysconfig.get_include())')
     g++ -std=c++11 -undefined dynamic_lookup -shared max_align_bytes_op.cc -o max_align_bytes_op.so -fPIC -I $TF_INC -O2
 
-Then in the same directory:
+To compile on Linux:
 
+Follow instructions in https://github.com/tensorflow/tensorflow/issues/12482#issuecomment-328829250
+then
+export op=max_align_bytes_op
+TF_INC=$(python -c 'import tensorflow as tf; print(tf.sysconfig.get_include())')
+g++ -std=c++11 -shared $op.cc -o $op.so -fPIC -I $TF_INC -O2
+
+
+Then in the same directory:
+    python
+    import tensorflow as tf
     max_align_bytes_op = tf.load_op_library("./max_align_bytes_op.so")
     print("max align bytes: ")
     sess = tf.Session()
