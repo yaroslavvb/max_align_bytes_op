@@ -1,6 +1,6 @@
 import tensorflow as tf
 
 max_align_bytes_op = tf.load_op_library("./max_align_bytes_op.so")
-print("max align bytes: ")
 sess = tf.Session()
-print(sess.run(max_align_bytes_op.max_align_bytes()))
+max_align_bytes = sess.run(max_align_bytes_op.max_align_bytes())
+print("EIGEN_MAX_ALIGN_BYTES", max_align_bytes)
