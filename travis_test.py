@@ -6,4 +6,4 @@ import unittest
 class Test(unittest.TestCase):
   def test_simple(self):
     sess = tf.Session()
-    self.assertEqual(sess.run(tf.ones(())*2), np.ones(())*2)
+    self.assertEqual(sess.run(tf.ones(())*2), np.ones(())*3)
