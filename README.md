@@ -14,7 +14,7 @@ export op=max_align_bytes_op
 TF_INC=$(python -c 'import tensorflow as tf; print(tf.sysconfig.get_include())')
 TF_LIB=$(python -c 'import tensorflow as tf; print(tf.sysconfig.get_lib())')
 g++ -march=native -std=c++11 -shared $op.cc -o $op.so -fPIC -I $TF_INC -L$TF_LIB -ltensorflow_framework -O2
-python max_align_bytes_op_test.py
+python max_align_bytes_op_run.py
 ```
 
 Then in the same directory:
