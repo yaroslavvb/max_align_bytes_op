@@ -7,6 +7,7 @@ To compile on Mac:
 
 To compile on Linux:
 
+
 ```
 Follow instructions in https://github.com/tensorflow/tensorflow/issues/12482#issuecomment-328829250
 then
