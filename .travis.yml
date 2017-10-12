@@ -1,13 +1,13 @@
-# reference
-#  https://github.com/fchollet/keras/blob/master/.travis.yml
 sudo: required
 dist: trusty
 language: python
 python:
-  - "3.5"
-# command to install dependencies
+- '3.5'
 install:
-  - pip install numpy
-  - pip install tf-nightly
+- pip install numpy
+- pip install tf-nightly
 script:
-  - pytest
+- pytest
+notifications:
+  slack:
+    secure: hftO9dJIC8eov+b+Sjbi+KHbjrlbHCDZWt+xmqL50jWKMcioipdgMABjAk9udvpVGQpCfgZNMePOz3p7lwOnEdugGWVlnGqistnMSG8+zt3YeJs8BpJnVuJTFJQ+fJn4Hm/j2oamBZPPQxouPSm03/Eft+6D/Q7j6p2kzoC1j4c+fsxCoUS4gqF637nhjMRZP8ZobfKoInwgmOzDrdFKMjR0cZz//tk5kA+Z6u3J7KsvolqAWhzd69Rn0xUMK5oy6lX19d/dDvdNSKR0tiGceKD+IB3rRiCK3o+EdUX0oPuD3D3np0y+1Xq193r8DyLzUgmBz0Sh8rOUl40xBmAB3j5pIb1iFvfLnr+0v17ovXWJ3P9BQhuZzBvsCVdEOS/QSARrCWjdGKUysEU9kMABDDAEqICG3GlYsybZVe4n/0cSPu1sJcV61y/SYlIclIZ7uFy3s8327aFfHta3Bi/ogBFVXnetHkOCla7FzsyGD8O2sWdvvq5YxiNMNCn4kOGkaec90Zeg4iK/dMCKfD6FVUXo58baz+9EBMEDxV/AAcg7utA0NaCm1w/nWN9IZG8cHmQ4fySShc6+Lt/7XH1DfqebHQ96cXF/n52BYS6PROawVCBOMJz4IVKRhhT018FU/fQUn7mpeUCxJchO5xBHH55U/59IZni9s2fg5PBUe7I=
